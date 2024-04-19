@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/BackgroundLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.DetailUserActivity">
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        style="@style/BackgroundLayout"
+        android:paddingBottom="20dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/avatar_detail"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            style="@android:style/TextAppearance.Theme"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ProgressBar
+                android:id="@+id/loadingProgressUserDetail"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:elevation="7dp"
+                android:indeterminateTint="@color/gray_bg"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_item_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="16dp"
+                android:text="@string/username"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@+id/iv_avatar_received"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.github.siyamed.shapeimageview.CircularImageView
+                android:id="@+id/iv_avatar_received"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="52dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:siBorderColor="@color/gray_bg"
+                tools:src="@android:color/background_dark" />
+
+            <TextView
+                android:id="@+id/tv_name_received"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="@string/name"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/iv_avatar_received" />
+
+            <TextView
+                android:id="@+id/tv_items_repository"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/repository"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_name_received" />
+
+            <TextView
+                android:id="@+id/tv_items_following"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/followings"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/tv_items_repository"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_name_received" />
+
+            <TextView
+                android:id="@+id/tv_items_followers"
+                android:layout_width="wrap_content"
+                android:layout_height="16dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/follower"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_items_repository"
+                app:layout_constraintTop_toBottomOf="@+id/tv_name_received" />
+
+            <TextView
+                android:id="@+id/tv_items_company"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/company"
+                app:layout_constraintEnd_toEndOf="@+id/tv_items_repository"
+                app:layout_constraintStart_toStartOf="@+id/tv_items_repository"
+                app:layout_constraintTop_toBottomOf="@+id/tv_items_repository"
+                tools:textAlignment="textStart" />
+
+            <TextView
+                android:id="@+id/tv_items_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/location"
+                app:layout_constraintEnd_toEndOf="@+id/tv_items_company"
+                app:layout_constraintStart_toStartOf="@+id/tv_items_company"
+                app:layout_constraintTop_toBottomOf="@+id/tv_items_company" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/btn_favorite"
+                style="@style/BackgroundLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:src="@drawable/ic_baseline_favorite_border_50"
+                app:layout_constraintStart_toEndOf="@id/iv_avatar_received"
+                app:layout_constraintTop_toTopOf="@id/iv_avatar_received" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="364dp"
+            android:minHeight="?actionBarSize"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/avatar_detail"
+            app:tabBackground="@drawable/tab_background"
+            app:tabIndicatorFullWidth="false"
+            app:tabIndicatorHeight="0dp"
+            app:tabMode="fixed"
+            app:tabRippleColor="@null"
+            app:tabSelectedTextColor="@color/gray_bg"
+            app:tabTextAppearance="@style/TabLayoutTextStyle"
+            app:tabTextColor="@color/white" />
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toBottomOf="@id/tabs" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

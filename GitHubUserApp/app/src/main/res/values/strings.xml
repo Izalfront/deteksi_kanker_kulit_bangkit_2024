@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">GitHub User App</string>
+
+    <string name="find_username">Cari Pengguna</string>
+    <string name="favorite_page">Halaman Favorit</string>
+    <string name="settings_page">Halaman Pengaturan</string>
+
+    <string name="dark_mode">Mode Gelap</string>
+
+    <!--    Splash Screen String Value-->
+    <string name="authorDeclaration">Dibuat oleh : Luthfi Yafi Alfiansyah</string>
+
+    <!--    Option Menu String Value-->
+    <string name="findUsername">Cari Pengguna</string>
+
+    <!--    Item Users Layout String Value-->
+    <string name="avatar_image">Gambar Avatar</string>
+
+    <string name="user">User</string>
+
+    <string name="usernameTitle">"Nama Pengguna : "</string>
+    <string name="username">Username</string>
+
+    <string name="company">Company</string>
+    <string name="companyTitle">"Bekerja di "</string>
+
+    <string name="repository">%s Repositori</string>
+    <string name="followings">%s Diikuti</string>
+    <string name="follower">%s Pengikut</string>
+
+    <!--    Detail User String Value-->
+    <string name="tab_text_1">Diikuti</string>
+    <string name="tab_text_2">Pengikut</string>
+
+    <string name="detail_user">Detil Pengguna</string>
+    <string name="name">Memuat Pengguna...</string>
+    <string name="location">Lokasi</string>
+
+    <string name="add_favorite">Pengguna ditambahkan ke favorit</string>
+    <string name="delete_favorite">Pengguna dihapus dari favorit"</string>
+
+    <!--    Favorite String Value-->
+    <string name="title_appbar_favorite">Pengguna Favorit</string>
+    <string name="empty_favorite">Kamu tidak memiliki pengguna favorit</string>
+
+    <!--    Fragment String Value-->
+    <string name="errorMessageFollowing">Pengguna Tidak Mengikuti Siapapun</string>
+    <string name="errorMessageFollowers">Pengguna Tidak Memiliki Pengikut</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>
